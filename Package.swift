@@ -7,7 +7,7 @@ let package = Package(
     name: "osrm-text-instructions.swift",
     defaultLocalization: "en",
     platforms: [
-        .macOS(.v10_14), .iOS(.v12), .watchOS(.v5), .tvOS(.v12)
+        .macOS(.v10_14), .iOS(.v14), .watchOS(.v5), .tvOS(.v12)
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
@@ -18,21 +18,23 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(name: "MapboxDirections", url: "https://github.com/mapbox/mapbox-directions-swift", from: "2.0.0"),
+        .package(url: "https://github.com/mapbox/mapbox-navigation-ios.git", from: "3.1.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "OSRMTextInstructions",
-            dependencies: ["MapboxDirections"],
+            dependencies: [
+              .product(name: "MapboxNavigationCore", package: "mapbox-navigation-ios"),
+            ],
             path: "OSRMTextInstructions",
             exclude: ["Info.plist"]),
         .testTarget(
             name: "OSRMTextInstructionsTests",
             dependencies: [
                 "OSRMTextInstructions",
-                "MapboxDirections",
+                .product(name: "MapboxNavigationCore", package: "mapbox-navigation-ios"),
             ],
             path: "OSRMTextInstructionsTests",
             exclude: ["Info.plist"],

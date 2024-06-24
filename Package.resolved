@@ -2,39 +2,30 @@
   "object": {
     "pins": [
       {
-        "package": "MapboxDirections",
-        "repositoryURL": "https://github.com/mapbox/mapbox-directions-swift",
+        "package": "MapboxCommon",
+        "repositoryURL": "https://github.com/mapbox/mapbox-common-ios.git",
         "state": {
           "branch": null,
-          "revision": "3aaab4fb516638c51ec8a2e73cd2fabdb4588622",
-          "version": "2.11.1"
+          "revision": "9c04997ed32c5b2506eb704f9f7a16367b5dcc64",
+          "version": "24.4.0"
         }
       },
       {
-        "package": "Polyline",
-        "repositoryURL": "https://github.com/raphaelmor/Polyline.git",
+        "package": "MapboxNavigation",
+        "repositoryURL": "https://github.com/mapbox/mapbox-navigation-ios.git",
         "state": {
           "branch": null,
-          "revision": "353f80378dcd8f17eefe8550090c6b1ae3c9da23",
-          "version": "5.1.0"
+          "revision": "57197763090592ff79c94897b59dba278de4cd0a",
+          "version": "3.1.1"
         }
       },
       {
-        "package": "swift-argument-parser",
-        "repositoryURL": "https://github.com/apple/swift-argument-parser",
+        "package": "MapboxNavigationNative",
+        "repositoryURL": "https://github.com/mapbox/mapbox-navigation-native-ios.git",
         "state": {
           "branch": null,
-          "revision": "8f4d2753f0e4778c76d5f05ad16c74f707390531",
-          "version": "1.2.3"
-        }
-      },
-      {
-        "package": "Turf",
-        "repositoryURL": "https://github.com/mapbox/turf-swift.git",
-        "state": {
-          "branch": null,
-          "revision": "f0afe204b4266337066a436becab62fdd2b32378",
-          "version": "2.7.0"
+          "revision": "738d5a7f8c06a1c6eb27d9304c902abf5bbe7514",
+          "version": "311.0.0"
         }
       }
     ]
